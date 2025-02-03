@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* Poppins */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    max-width: 100%;
+    scroll-behavior: smooth;
+    position: relative;
+}
+.zIndex{
+    z-index: 3;
+}
+body{
+    width: 1200px;
+    background-color: #3e3e3e;
+    margin: auto;
+    overflow-x: hidden;
+}
+body::before{
+    content: '';
+    position: absolute;
+    height: 600px;
+    width: 200%;
+    background-color: #92505d;
+    z-index: 0;
+    left: -650px;
+    top: 700px;
+    transform: skewY(40deg);
+    opacity: 0.4;
+}
+nav{
+    font-size: 100%;
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    justify-content:space-around;
+    background-color: #444;
+    padding: 1rem 0;
+}
+.nav-links{
+    display: flex;
+    gap: 2rem;
+    list-style-type: none;
+    background-color: transparent;
+}
+.link a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: all 0.3s;
+    background-color: transparent;
+}
+.link a::after{
+    content: '';
+    position: absolute;
+    top: 150%;
+    left: 0;
+    height: 3px;
+    background-color: #fe8ca2;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;  
+    transition: all 0.3s;  
+}
+.link a:hover{
+    color: #fe8ca2;
+}
+.link a:hover::after{
+    opacity: 1;
+}
+.btn{
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: #92505d;
+    cursor: pointer;
+    transition: 0.5s all;
+    box-shadow: inset calc(width) 0 0 0 #fe8ca2;
+}
+.btn:hover{
+    color: white;
+    box-shadow: inset 200px 0 0 0 #fe8ca2;
+}
+
+.hero{
+    display: flex;
+    background-color: #444;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 5rem 5rem;
+    position: relative;
+}
+.hero::before{
+    position: absolute;
+    content: '';
+    height: 400px;
+    top: 100px;
+    left: 0;
+    background-color: #fe8ca2;
+    width: 1200px;
+    opacity: 0.4;
+    z-index: 1;
+    transform: skewY(5deg);
+}
+.content{
+    width: 50%;
+    color: white;
+    z-index: 2;
+}
+.content h1{
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 3px;
+    text-shadow: 5px 5px 0px #444;
+}
+.content h2{
+    font-size: 2rem;
+}
+.content h2 span{
+    color: #fe8ca2;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+.content h4{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.content p{
+    color: #bbb;
+}
+.content .btn{
+    margin: 2rem 0;
+}
+.hero #slika{
+    width: 300px;
+    left: 0;
+    z-index: 2;
+    filter: drop-shadow(10px 10px 0 #444);
+}
+.hero .btn{
+    border: #444 5px solid; 
+}
+.oMeni{
+    width: 100%;
+    background-color: #444;
+    padding: 0 1rem;
+}
+.oMeni h1{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    padding: 2rem 0;
+}
+.oMeniGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: center;
+}
+.Content{
+    width: auto;
+    height: 100%;
+    border-radius: 15px;
+    padding: 2rem;
+    background-color: #555;
+    transition: all 0.3s;
+    z-index: 100;
+}
+.Content ul{
+    list-style-type: circle;
+    color: #bbb;
+    padding: 0 2rem;
+}
+.Content p{
+    color: #bbb;
+}
+.Content ul li{
+    padding: 0.3rem 0;
+}
+.ContentNaslov{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+.ContentNaslov h2{
+    color: white;
+}
+.ContentNaslov i{
+    color: #fe8ca2;
+}
+.Content:hover{
+    background-color: #666;
+}
+.Content .btn{
+    margin-bottom: 2rem;
+}
+.vestine{
+    width: 100%;
+    padding: 0 1rem;
+    background-color: #444;
+}
+.vestine h1{
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 0;
+}
+.vestineGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+}
+.Iskustvo h1{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    padding: 2rem 0;
+}
+.IskustvoGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+.Iskustvo{
+    padding: 0 1rem;
+    padding-bottom: 5rem;
+    background-color: #444;
+    width: 100%;
+}
+footer{
+    width: 100%;
+    padding: 10rem 4rem 1rem 4rem;
+    background-color: #444;
+    position: relative;
+}
+.footerContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social a{
+    text-decoration: none;
+    margin: 1rem;
+    color: white;
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+.social a:hover{
+    color: #fe8ca2;
+}
+.kontakt h2{
+    font-size: 1.2rem;
+    color: white;
+}
+.kontakt ul{
+    color: #bbb;
+    list-style-type: circle;
+}
+footer .btn{
+    border: #444 5px solid; 
+    width: max-content;
+    padding: 0.5rem 0.5rem;
+    border-radius: 25%;
+    display: block;
+    position: relative;
+    margin: 3rem auto;
+}
+footer::before{
+    position: absolute;
+    content: '';
+    width: 1200px;
+    height: 300px;
+    top: 0;
+    left: 0;
+    background-color: #fe8ca2;
+    opacity: 0.4;
+    z-index: 0;
+    transform: skewY(-5deg);
+}
+footer .btn:hover{
+    color: white;
+    box-shadow: inset 50px 0 0 0 #fe8ca2;
+}
+footer p{
+    color: #bbb;
+    text-align: center;
+}
+
+@media (width < 900px){
+    .oMeniGrid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (width < 800px){
+    .content{
+        width: 100%;
+    }
+    .hero{
+        flex-direction: column;
+    }
+}
+@media (width < 600px){
+    .nav-link{
+        display: none;
+    }
+    .hero{
+        padding: 3rem 3rem;
+    }
+    .oMeniGrid{
+        grid-template-columns: 1fr;
+    }
+    .vestineGrid{
+        grid-template-columns: 1fr;
+    }
+    .footerContent{
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
