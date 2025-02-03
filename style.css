@@ -175,6 +175,7 @@ nav{
     list-style-type: circle;
     color: #bbb;
     padding: 0 2rem;
+    margin-top: 2rem;
 }
 .Content p{
     color: #bbb;
@@ -197,8 +198,8 @@ nav{
 .Content:hover{
     background-color: #666;
 }
-.Content .btn{
-    margin-bottom: 2rem;
+.Content a{
+    text-decoration: none;
 }
 .vestine{
     width: 100%;
