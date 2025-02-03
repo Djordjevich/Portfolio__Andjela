@@ -17,7 +17,6 @@ body{
     width: 1200px;
     background-color: #3e3e3e;
     margin: auto;
-    overflow-x: hidden;
 }
 body::before{
     content: '';
@@ -301,15 +300,28 @@ footer p{
     }
 }
 @media (width < 800px){
+    body::before{
+        display: none;
+    }
     .content{
+        width: 100%;
+    }
+    .hero::before{
         width: 100%;
     }
     .hero{
         flex-direction: column;
     }
+    footer::before{
+        width: 100%;
+    }
 }
 @media (width < 600px){
-    .nav-link{
+    nav{
+        justify-content: right;
+        padding: 1rem 1rem;
+    }
+    .nav-links{
         display: none;
     }
     .hero{
